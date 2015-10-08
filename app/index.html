@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="dealsOnUiApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/">India Deals</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#/">Home</a></li>
+              <li><a ng-href="#/about">Sign Up</a></li>
+              <li><a ng-href="#/">Sign In</a></li>
+              <li><a ng-href="#/">Help</a></li>
+              <li><a ng-href="#/">Cart</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    End of header
+
+-->
+<div id="seller_index_header" class="clearfix">
+    <nav class="navbar navbar-default">
+        <div class="clearfix">
+            <div class="navbar-header col-lg-4 col-sm-7">
+                <a class="navbar-brand" href="#" ><img src="images/logo.png" id='seller_logo'/> </a>
+            </div>
+            <div class="col-lg-8 col-sm-5">
+                <form class="form-inline" role="form" id="seller_signin_form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" class="form-control" name="username" id="login_username" placeholder="Username" required="required" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="password" class="form-control" name="password" id="login_password" placeholder="Password" required="required" />
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-default" id="header_login_submit" >Sign In</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--
+    <div class="container">
+    <div ng-view=""></div>
+    </div>
+End of Body
+-->
+<div  id="seller_index_body">
+    <!--<div>-->
+    <div class="clearfix">
+        <div class="col-lg-7" id="seller_index_slider">
+            <div id="myCarousel" class="carousel slide"  data-ride="carousel">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+
+
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                        <img src="images/logo.png" alt="Chania" width="460" height="345">
+                        <div class="carousel-caption">
+                            <h3>Chania</h3>
+                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="images/logo.png" alt="Chania" width="460" height="345">
+                        <div class="carousel-caption">
+                            <h3>Chania</h3>
+                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="images/logo.png" alt="Flower" width="460" height="345">
+                        <div class="carousel-caption">
+                            <h3>Flowers</h3>
+                            <p>Beatiful flowers in Kolymbari, Crete.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="images/logo.png" alt="Flower" width="460" height="345">
+                        <div class="carousel-caption">
+                            <h3>Flowers</h3>
+                            <p>Beatiful flowers in Kolymbari, Crete.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-5" id="signup_form">
+            <form role="form">
+                <h1>Register</h1>
+                <div class="form-group">
+                    <label for="signup_fullname">Full Name</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" class="form-control" name="FirstName" id="signup_fullname" placeholder="Enter Full Name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email_id">Enter Email</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input type="email" class="form-control" id="email_id" name="Email" placeholder="Enter Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Enter Password</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="password" class="form-control" id="login_password" name="Password" placeholder="Enter Password" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock "></i></span>
+                        <input type="password" class="form-control" id="confirm_password" name="ConfirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                </div>
+                <button type="submit" name="submit" id="signup_submit" value="Submit" class="btn btn-default col-xs-offset-10">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
+    </div>
+
+-->
+
+<div id="seller_index_footer" class="clearfix">
+    <div class="navbar navbar-default">
+        <span class="glyphicon glyphicon-envelope"></span>
+        Contact us: xyz@xyz.com
+    </div>
+</div>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
